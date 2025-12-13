@@ -4,10 +4,7 @@
 
 PolyDropBox is a revolutionary decentralized file-sharing application that combines blockchain technology, IPFS storage, and cross-chain payment capabilities to create a secure, transparent, and accessible file-sharing ecosystem.
 
----
-
-live demo  - https://youtu.be/7PaJ95Shh9c
-live url  - https://poly-drop-box-kej9.vercel.app/
+ 
 
 
 ## 📖 What is PolyDropBox?
