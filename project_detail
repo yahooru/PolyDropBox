@@ -1,0 +1,355 @@
+🚀 PolyDropBox
+Decentralized File Sharing with Expiry, Payments & Cross-Chain Swaps
+🔥 BIG PICTURE (What PolyDropBox Is)
+
+PolyDropBox is a WeTransfer + Dropbox + Crypto Payments + Cross-Chain Swap platform where:
+
+Files are stored decentralized (IPFS/Pinata)
+
+Access is controlled by Polygon smart contracts
+
+Payments can be made from ANY chain using SideShift
+
+Files can expire, burn after download, or be NFT-gated
+
+👉 Sender gets paid
+👉 Receiver doesn’t need to worry about which chain/token they have
+👉 Everything is trustless
+
+🧠 CORE IDEA (1-Minute Understanding)
+
+Creator uploads a file
+
+File is encrypted + stored on IPFS
+
+Creator sets rules (expiry, price, downloads)
+
+A share link is created
+
+Receiver opens link
+
+Receiver pays in ANY crypto via SideShift
+
+SideShift swaps → sends funds to Polygon
+
+Polygon smart contract unlocks file
+
+File is downloaded (or burned)
+
+👤 USER POV (Receiver / Downloader)
+🔹 Step 1: Open Share Link
+
+User opens:
+
+https://polydropbox.io/file/xyz
+
+
+They see:
+
+File name & size
+
+Expiry time
+
+Price (e.g. 2 USDC on Polygon)
+
+Accepted payments:
+👉 “Pay with ANY crypto (BTC, ETH, SOL, BNB…)”
+
+🔹 Step 2: Choose Payment Method
+
+User chooses:
+
+✅ Pay directly on Polygon (if they have MATIC/USDC)
+
+🔁 Pay via SideShift (cross-chain)
+
+🔹 Step 3: SideShift Swap Flow (Very Important)
+
+If user clicks “Pay with Any Crypto”:
+
+Your frontend calls SideShift API:
+
+Input asset: user chooses (BTC / ETH / SOL / etc.)
+
+Output asset: USDC (Polygon)
+
+Output address: PolyDropBox smart contract
+
+SideShift returns:
+
+Deposit address (for BTC/ETH/etc.)
+
+Exact amount to send
+
+Time window
+
+User sends crypto to SideShift address
+
+SideShift swaps & sends USDC to Polygon contract
+
+🔹 Step 4: Smart Contract Confirms Payment
+
+Polygon smart contract:
+
+Confirms USDC received
+
+Marks file as paid
+
+Updates download count
+
+Emits AccessGranted event
+
+🔹 Step 5: Secure Download
+
+Backend checks contract state
+
+Decryption key released one time
+
+File downloaded from IPFS
+
+If “burn after download” → access revoked forever
+
+🔹 Step 6: Proof & Receipt
+
+User sees:
+
+Polygon transaction hash
+
+Payment receipt
+
+Download timestamp
+
+🧑‍🎨 CREATOR POV (Uploader / Seller)
+🔹 Step 1: Upload File
+
+Creator uploads:
+
+PDF / ZIP / Video / Design / Code
+
+System:
+
+Encrypts file (AES-256)
+
+Uploads to Pinata (IPFS)
+
+Generates CID
+
+🔹 Step 2: Set Rules
+
+Creator configures:
+
+⏰ Expiry
+
+1 hour / 24 hours / custom date
+
+💰 Price
+
+Example: 2 USDC (Polygon)
+
+🔥 Security
+
+Burn after download
+
+Max downloads (e.g. 3)
+
+Password + wallet lock
+
+🔹 Step 3: Enable Cross-Chain Payments
+
+Creator toggles:
+
+✅ “Accept payments from any blockchain”
+
+This auto-enables SideShift.
+
+Creator does NOT need to handle swaps manually.
+
+🔹 Step 4: Share Link
+
+Creator sends:
+
+https://polydropbox.io/file/xyz
+
+
+Receiver can pay using ANY crypto.
+
+🔹 Step 5: Earnings
+
+Creator dashboard shows:
+
+Total downloads
+
+Total revenue
+
+Payments received (USDC on Polygon)
+
+Source chains (BTC, ETH, SOL etc.)
+
+🧩 FEATURES (CORE + UNIQUE)
+🔐 File Security
+
+End-to-end encryption
+
+One-time decryption keys
+
+Burn-after-download
+
+Auto-expiry
+
+💸 Payments
+
+Polygon native payments (USDC/MATIC)
+
+Cross-chain payments via SideShift
+
+Automatic creator payout
+
+Transparent on-chain accounting
+
+🔁 SideShift-Powered Features
+
+Pay from ANY chain
+
+No KYC for users
+
+No bridge UI confusion
+
+One-click crypto checkout
+
+Automatic conversion to Polygon
+
+🔗 Blockchain Proof
+
+File hash on Polygon
+
+Timestamp proof
+
+Anti-tampering verification
+
+🧠 Optional AI (Gemini)
+
+File summary preview
+
+Malware scan
+
+Sensitive content detection
+
+📊 DASHBOARDS
+👤 User Dashboard
+
+Download history
+
+Payment receipts
+
+Active access links
+
+Wallet connections
+
+🧑‍🎨 Creator Dashboard
+
+Upload files
+
+Manage links
+
+Revenue analytics
+
+Download logs
+
+SideShift payment stats
+
+Expiry & burn settings
+
+🔗 HOW POLYGON IS USED (CLEAR & SIMPLE)
+
+Polygon is the access controller + payment settlement layer.
+
+Smart Contract Stores:
+
+File ID (CID hash)
+
+Owner (creator)
+
+Price (USDC)
+
+Expiry timestamp
+
+Download limit
+
+Paid status
+
+Smart Contract Handles:
+
+Receiving USDC from SideShift
+
+Splitting payment:
+
+Creator
+
+Platform fee
+
+Enforcing rules:
+
+if (paid && notExpired && downloadsLeft)
+   grantAccess();
+
+🔁 HOW SIDESHIFT IS USED (VERY IMPORTANT)
+
+SideShift is your cross-chain payment engine.
+
+You use SideShift to:
+
+Accept BTC / ETH / SOL / BNB / LTC / etc.
+
+Convert everything into Polygon USDC
+
+Avoid bridges & liquidity issues
+
+Give users frictionless checkout
+
+Technical Flow:
+
+Frontend → SideShift API (create shift)
+
+SideShift → returns deposit address
+
+User sends crypto
+
+SideShift → sends USDC to Polygon contract
+
+Contract emits event → unlock file
+
+👉 You never custody funds
+👉 No bridge risks
+👉 Very hackathon-friendly
+
+🛠️ TECH STACK (YOU ALREADY HAVE)
+
+Frontend: React / Next.js
+
+Backend: Node.js
+
+DB: MongoDB (metadata, logs)
+
+Storage: Pinata (IPFS)
+
+Blockchain: Polygon
+
+Swap: SideShift API
+
+Wallets: WalletConnect
+
+AI (optional): Gemini
+
+🌍 REAL-WORLD USE CASES
+
+Freelancers delivering work
+
+Designers selling assets
+
+Developers sharing builds
+
+Lawyers sending documents
+
+Students submitting projects
+
+Web3 creators selling files
