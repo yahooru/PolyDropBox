@@ -18,6 +18,18 @@ PolyDropBox is a **decentralized file-sharing platform** that allows users to up
 
 ---
 
+## Update 
+**File Preview (Before Payment)**
+Preview PDFs (first pages)
+Blurred image preview
+
+**Folder & Multi-File Upload**
+Upload multiple files at once
+Create folders / bundles
+
+**Password-Protected Share Links**
+Optional password + blockchain access
+
 ## 🎯 What Does PolyDropBox Do?
 
 ### For Content Creators:
