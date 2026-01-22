@@ -1,0 +1,16 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/download/route": "app/api/download/route.js",
+  "/api/file/[fileId]/route": "app/api/file/[fileId]/route.js",
+  "/api/health/route": "app/api/health/route.js",
+  "/api/upload/route": "app/api/upload/route.js",
+  "/api/preview/[fileId]/route": "app/api/preview/[fileId]/route.js",
+  "/api/sideshift/status/[orderId]/route": "app/api/sideshift/status/[orderId]/route.js",
+  "/api/sideshift/create/route": "app/api/sideshift/create/route.js",
+  "/page": "app/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/icon.svg/route": "app/icon.svg/route.js",
+  "/upload/page": "app/upload/page.js",
+  "/file/[fileId]/page": "app/file/[fileId]/page.js",
+  "/api/files/route": "app/api/files/route.js"
+}
