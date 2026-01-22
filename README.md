@@ -18,7 +18,7 @@ PolyDropBox is a **decentralized file-sharing platform** that allows users to up
 
 ---
 
-## 📋 See [CHANGELOG.md](CHANGELOG.md) for full update history
+## 📋 See [CHANGELOG.md](CHANGELOG.md) for full update history for the wave 5
 
 **Latest updates include:**
 - File Preview (PDF first page, blurred images) before payment
