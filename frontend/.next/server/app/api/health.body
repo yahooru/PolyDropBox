@@ -1,0 +1,1 @@
+{"status":"ok","timestamp":"2026-03-05T07:41:29.022Z","services":{"api":"running","environment":{"contractAddress":true,"usdcAddress":true,"pinataApiKey":true,"privateKey":true,"mongodb":true}}}

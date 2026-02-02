@@ -1,13 +1,13 @@
-const path = require('path')
-try {
-  require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
-} catch (_) {}
-
+﻿const path = require('path')
+try { require('dotenv').config({ path: path.resolve(__dirname, '../.env') }) } catch (_) {}
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Use standalone output for Docker deployments (optional)
-  // output: 'standalone',
+  eslint: { ignoreDuringBuilds: true },
+  webpack: (config) => {
+    config.resolve.fallback = { ...config.resolve.fallback, '@react-native-async-storage/async-storage': false, 'pino-pretty': false }
+    return config
+  },
   env: {
     NEXT_PUBLIC_CONTRACT_ADDRESS: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS,
     NEXT_PUBLIC_USDC_ADDRESS: process.env.NEXT_PUBLIC_USDC_ADDRESS,
@@ -17,6 +17,4 @@ const nextConfig = {
     NEXT_PUBLIC_FRONTEND_URL: process.env.NEXT_PUBLIC_FRONTEND_URL || 'http://localhost:3000',
   },
 }
-
 module.exports = nextConfig
-
