@@ -4,6 +4,41 @@ This document lists all updates, new features, and improvements made to the Poly
 
 ---
 
+## Wave 6 — Polygon Mainnet Deployment  
+
+### Mainnet Deployment
+- **Deployed PolyDropBox to Polygon Mainnet** (Chain ID 137)
+- **Contract Address**: `0x6f82905eba43Be79c8E7a80056031846d489d50B`
+- **USDC**: Native Circle USDC `0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359`
+- [View on PolygonScan](https://polygonscan.com/address/0x6f82905eba43Be79c8E7a80056031846d489d50B)
+
+### Smart Contract Implementation
+- **Implemented PolyDropBox.sol** (was previously empty)
+- Full contract with: `createFile`, `payForAccess`, `hasAccess`, `recordCrossChainPayment`, `recordDownload`, `getFile`
+- OpenZeppelin SafeERC20, ReentrancyGuard, Ownable
+- 2.5% platform fee with configurable recipient
+- Burn-after-download support
+
+### Configuration Updates
+- Added Polygon mainnet to Hardhat config (`npm run deploy:mainnet`)
+- Updated Wagmi providers to use Polygon mainnet instead of Amoy
+- All API routes (upload, download, sideshift) now use mainnet RPC
+- Environment variables: `NEXT_PUBLIC_POLYGON_RPC`, `NEXT_PUBLIC_CONTRACT_ADDRESS`, `NEXT_PUBLIC_USDC_ADDRESS`
+
+### Files Modified
+- `contracts/PolyDropBox.sol` — Full implementation
+- `hardhat.config.js` — Added polygon network
+- `scripts/deploy-mainnet.js` — New mainnet deploy script
+- `frontend/app/providers.tsx` — Polygon mainnet chain
+- `frontend/next.config.js` — RPC env vars
+- `frontend/app/api/upload/route.ts` — Mainnet RPC
+- `frontend/app/api/download/route.ts` — Mainnet RPC
+- `frontend/app/api/sideshift/status/[orderId]/route.ts` — Mainnet RPC
+- `README.md` — Updated contract addresses and setup
+- `DEPLOYMENT.md` — Fixed typo
+
+---
+
 ## Newly Added Features
 
 ### File Preview (Before Payment)

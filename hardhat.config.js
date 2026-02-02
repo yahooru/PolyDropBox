@@ -18,10 +18,16 @@ module.exports = {
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 80002,
     },
+    polygon: {
+      url: process.env.POLYGON_MAINNET_RPC || process.env.POLYGON_AMOY_RPC || "https://polygon-rpc.com",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 137,
+    },
   },
   etherscan: {
     apiKey: {
       polygonAmoy: process.env.POLYGONSCAN_API_KEY || "",
+      polygon: process.env.POLYGONSCAN_API_KEY || "",
     },
   },
 };

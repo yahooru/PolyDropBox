@@ -1,17 +1,19 @@
 'use client'
 
 import { WagmiProvider, createConfig, http } from 'wagmi'
-import { polygonAmoy } from 'wagmi/chains'
+import { polygon } from 'wagmi/chains'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { injected } from 'wagmi/connectors'
 
+const polygonRpc = process.env.NEXT_PUBLIC_POLYGON_RPC || process.env.NEXT_PUBLIC_POLYGON_AMOY_RPC || 'https://polygon-rpc.com'
+
 const config = createConfig({
-  chains: [polygonAmoy],
+  chains: [polygon],
   connectors: [
     injected({ shimDisconnect: true }),
   ],
   transports: {
-    [polygonAmoy.id]: http(process.env.NEXT_PUBLIC_POLYGON_AMOY_RPC || 'https://rpc-amoy.polygon.technology'),
+    [polygon.id]: http(polygonRpc),
   },
 })
 

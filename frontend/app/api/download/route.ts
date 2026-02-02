@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     if (contractAddress && privateKey) {
       try {
         const provider = new ethers.JsonRpcProvider(
-          process.env.NEXT_PUBLIC_POLYGON_AMOY_RPC || 'https://rpc-amoy.polygon.technology'
+          process.env.NEXT_PUBLIC_POLYGON_RPC || process.env.NEXT_PUBLIC_POLYGON_AMOY_RPC || 'https://polygon-rpc.com'
         )
         const wallet = new ethers.Wallet(privateKey, provider)
         const contractABI = [
