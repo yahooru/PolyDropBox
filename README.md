@@ -26,6 +26,8 @@ PolyDropBox is a **decentralized file-sharing platform** that allows users to up
 - Password-protected share links
 - Expiring share links
 - Download audit logs with transaction hashes
+- eveything is on the mainnet
+- eveything is testest
 
 ---
 
