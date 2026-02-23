@@ -4,6 +4,9 @@ This document lists all updates, new features, and improvements made to the Poly
 
 ---
 
+
+
+
 ## Wave 6 — Polygon Mainnet Deployment  
 
 ### Mainnet Deployment
@@ -11,6 +14,7 @@ This document lists all updates, new features, and improvements made to the Poly
 - **Contract Address**: `0x6f82905eba43Be79c8E7a80056031846d489d50B`
 - **USDC**: Native Circle USDC `0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359`
 - [View on PolygonScan](https://polygonscan.com/address/0x6f82905eba43Be79c8E7a80056031846d489d50B)
+
 
 ### Smart Contract Implementation
 - **Implemented PolyDropBox.sol** (was previously empty)

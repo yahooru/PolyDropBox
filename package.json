@@ -10,6 +10,7 @@
     "deploy:mainnet": "hardhat run scripts/deploy-mainnet.js --network polygon",
     "test": "hardhat test"
   },
+  
   "dependencies": {
     "next": "14.2.35",
     "@openzeppelin/contracts": "^5.0.0",

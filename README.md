@@ -7,6 +7,9 @@ PolyDropBox is a revolutionary decentralized file-sharing application that combi
  
 
 
+ 
+
+
 ## 📖 What is PolyDropBox?
 
 PolyDropBox is a **decentralized file-sharing platform** that allows users to upload, share, and monetize files with complete control over access permissions. Unlike traditional file-sharing services, PolyDropBox leverages:
